@@ -1,0 +1,651 @@
+{
+  "type": "bundle",
+  "id": "bundle--da534203-de16-44b7-8d39-e98240cc52e0",
+  "spec_version": "2.1",
+  "created": "2025-05-20T11:25:52.228Z",
+  "modified": "2025-05-20T11:25:52.228Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--f32658a8-b252-4311-a911-e4766b369a7c",
+      "spec_version": "2.1",
+      "created": "2025-04-24T07:55:26.304Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--c4353c0c-0b14-4433-bc8a-9d563a0e4410",
+      "start_refs": [
+        "attack-action--5e7bf5b2-000b-4eb7-97c6-5f724acfba78"
+      ],
+      "name": "Resilmesh-RCTI-UberMicroEmulation",
+      "description": "Resilmesh-RCTI-UberMicroEmulation",
+      "scope": "incident"
+    },
+    {
+      "type": "identity",
+      "id": "identity--c4353c0c-0b14-4433-bc8a-9d563a0e4410",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.228Z",
+      "modified": "2025-05-20T11:25:52.228Z",
+      "name": "Blee"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--342ef8b8-0a7f-4401-aa08-84696abb225a",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Valid Accounts:Default Accounts",
+      "tactic_id": "TA0001",
+      "tactic_ref": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca",
+      "technique_id": "T1078.001",
+      "technique_ref": "attack-pattern--6151cbea-819b-455a-9fa6-99a1cc58797d",
+      "description": "Use Atomics #1 to activate the default giest account.  Execution mst be with admin rights",
+      "asset_refs": [
+        "attack-asset--6849fa0c-1f91-4457-bd17-9c3fb0cc8a12",
+        "attack-asset--283c8c60-591c-456b-9e14-182c0f2b9885"
+      ],
+      "effect_refs": [
+        "attack-condition--458ddae6-0ba8-4c8d-8fe0-d0facce0d3a8"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--6849fa0c-1f91-4457-bd17-9c3fb0cc8a12",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Atomics T1078.001",
+      "description": "use test #1 to activate the default guest account"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--283c8c60-591c-456b-9e14-182c0f2b9885",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Win 2 host"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--458ddae6-0ba8-4c8d-8fe0-d0facce0d3a8",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "T1135",
+      "pattern": "[\n  process:name = 'powershell.exe' AND (\n    process:command_line MATCHES '(?i)get-smbshare' \n  )\n]",
+      "on_true_refs": [
+        "attack-action--fc32f295-f0c4-4b7f-b635-65d29258145d"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--fc32f295-f0c4-4b7f-b635-65d29258145d",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Network Share Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1135",
+      "technique_ref": "attack-pattern--3489cfc5-640f-4bb3-a103-9137b97de79f",
+      "asset_refs": [
+        "attack-asset--86f8df9c-8894-4cd5-a50c-2edc5c6da0fd",
+        "attack-asset--c67e4e28-b7a7-42c5-bebb-a74a9e6385a1"
+      ],
+      "effect_refs": [
+        "attack-condition--923f4226-b74a-4b38-a993-cc7a8ef22f31"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--86f8df9c-8894-4cd5-a50c-2edc5c6da0fd",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Atomic T1135 Network Share Discovery",
+      "description": "Atomic Test # 5"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--c67e4e28-b7a7-42c5-bebb-a74a9e6385a1",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Network Share"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--923f4226-b74a-4b38-a993-cc7a8ef22f31",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "T1046",
+      "pattern": "[\n  process:name = 'powershell.exe' AND \n  process:command_line MATCHES '(?i)Get-Service\\\\s+(-Name)?\\\\s*[\"\\']?Remote\\\\s+Desktop\\\\s+Services[\"\\']?'\n]",
+      "on_true_refs": [
+        "attack-action--be2193bc-034c-4bf3-8835-6867ffc79fea"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--be2193bc-034c-4bf3-8835-6867ffc79fea",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Network Service Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1046",
+      "technique_ref": "attack-pattern--e3a12395-188d-4051-9a16-ea8e14d07b88",
+      "asset_refs": [
+        "attack-asset--59dfdd24-dec4-4010-a1d9-3fdbd1e80d63"
+      ],
+      "effect_refs": [
+        "attack-condition--69a4d5fc-b08e-4ead-a0e8-7cdb2e010aa9"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--59dfdd24-dec4-4010-a1d9-3fdbd1e80d63",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Atomics T1046",
+      "description": "Atomic Test #11 - Remote Desktop Services Discovery via PowerShell"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--69a4d5fc-b08e-4ead-a0e8-7cdb2e010aa9",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "T1083",
+      "pattern": "[\n  process:name = 'powershell.exe' AND (\n    process:command_line MATCHES '(?i)ls\\\\s+-recurse' OR\n    process:command_line MATCHES '(?i)get-childitem\\\\s+-recurse' OR\n    process:command_line MATCHES '(?i)gci\\\\s+-recurse'\n  )\n]",
+      "on_true_refs": [
+        "attack-action--1c4813d5-2e33-4bf7-b9cf-b94f87dbd4ad"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--1c4813d5-2e33-4bf7-b9cf-b94f87dbd4ad",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "File and Directory Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1083",
+      "technique_ref": "attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18",
+      "description": "This is carried out on the shared drive",
+      "asset_refs": [
+        "attack-asset--adc19e2a-854b-4adb-b799-9150ed31e128"
+      ],
+      "effect_refs": [
+        "attack-condition--4b991c70-258b-4104-8413-7fbd6303b469"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--adc19e2a-854b-4adb-b799-9150ed31e128",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Atomic T1083 #2",
+      "description": "Atomic Test #2 - File and Directory Discovery (PowerShell)"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--4b991c70-258b-4104-8413-7fbd6303b469",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "T1552.001",
+      "pattern": "[\n  (\n    process:name = 'cmd.exe' AND \n    process:command_line MATCHES '(?i)findstr\\\\s+/si\\\\s+(pass|password|pwd|credential)'\n  ) OR (\n    process:name = 'powershell.exe' AND (\n      process:command_line MATCHES '(?i)select-string\\\\s+.*\\\\s+-Pattern\\\\s+(pass|password|pwd|credential)' OR\n      process:command_line MATCHES '(?i)ls\\\\s+.*\\\\|\\\\s*select-string\\\\s+.*\\\\s+-Pattern\\\\s+(pass|password|pwd|credential)'\n    )\n  )\n]",
+      "on_true_refs": [
+        "attack-action--49a06890-42c2-4011-8895-8c6c1ae97935"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--49a06890-42c2-4011-8895-8c6c1ae97935",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Unsecured Credentials: Credential in Files",
+      "tactic_id": "TA0006",
+      "tactic_ref": "x-mitre-tactic--2558fd61-8c75-4730-94c4-11926db2a263",
+      "technique_id": "T1552.001",
+      "technique_ref": "attack-pattern--837f9164-50af-4ac0-8219-379d8a74cefc",
+      "description": "requires creation of a fille to contain the Win 2 password e.g. \"notapasswordfile.txt' - see the Atomic for guidlines.",
+      "asset_refs": [
+        "attack-asset--a5bc6127-8aed-472b-bc63-d63584fcfe7f",
+        "attack-asset--463ab2d3-bc13-463b-bfa7-06fb84f299f7"
+      ],
+      "effect_refs": [
+        "attack-condition--2c38badf-441c-47c5-a38c-67d4f1632c06"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--a5bc6127-8aed-472b-bc63-d63584fcfe7f",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Text File",
+      "description": "'Notapasswodfile.txt' located on the network share contains  credential to Win 4"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--463ab2d3-bc13-463b-bfa7-06fb84f299f7",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Atomic T1552.001",
+      "description": "Atomic Test #4 - Extracting passwords with findstr"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--2c38badf-441c-47c5-a38c-67d4f1632c06",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "T1078.003",
+      "pattern": "[\n  process:name = 'net.exe' AND (\n    process:command_line MATCHES '(?i)net\\\\s+user\\\\s+art-test\\\\s+/add' OR\n    process:command_line MATCHES '(?i)net\\\\s+user\\\\s+art-test\\\\s+.*' OR\n    process:command_line MATCHES '(?i)net\\\\s+localgroup\\\\s+administrators\\\\s+art-test\\\\s+/add' OR\n    process:command_line MATCHES '(?i)net\\\\s+localgroup\\\\s+administrators\\\\s+art-test\\\\s+/delete' OR\n    process:command_line MATCHES '(?i)net\\\\s+user\\\\s+art-test\\\\s+/delete'\n  )\n]",
+      "on_true_refs": [
+        "attack-action--0fa3fcae-9b39-42d6-97bb-4510c7a87ba0"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0fa3fcae-9b39-42d6-97bb-4510c7a87ba0",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Valid Accounts",
+      "tactic_id": "TA0001",
+      "tactic_ref": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca",
+      "technique_id": "T1078",
+      "technique_ref": "attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81",
+      "description": "Attacker obtains a local password for machine Win4",
+      "asset_refs": [
+        "attack-asset--8d31fa2f-f996-4019-abd9-f7585fba3b44",
+        "attack-asset--47275041-6676-4f31-b362-b2613013e1c5"
+      ],
+      "effect_refs": [
+        "attack-condition--95bd5256-53a2-4cbc-bcff-4fd25b2ebb68"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--8d31fa2f-f996-4019-abd9-f7585fba3b44",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Atomic T1078.003",
+      "description": "Atomic Test #1 - Create local account with admin privileges"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--47275041-6676-4f31-b362-b2613013e1c5",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Win4",
+      "description": "Attacjer get access to Win 4"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--95bd5256-53a2-4cbc-bcff-4fd25b2ebb68",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "T1083",
+      "pattern": "[\n  process:name = 'powershell.exe' AND (\n    process:command_line MATCHES '(?i)ls\\\\s+-recurse' OR\n    process:command_line MATCHES '(?i)get-childitem\\\\s+-recurse' OR\n    process:command_line MATCHES '(?i)gci\\\\s+-recurse'\n  )\n]",
+      "on_true_refs": [
+        "attack-action--508eadd9-ce82-4e08-a02d-a8a57aef7aee"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--508eadd9-ce82-4e08-a02d-a8a57aef7aee",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "File and Directory Discovery",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1083",
+      "technique_ref": "attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18",
+      "description": "This is carried out on the shared drive",
+      "asset_refs": [
+        "attack-asset--90a0e560-0a85-4795-b65e-a03273328730"
+      ],
+      "effect_refs": [
+        "attack-condition--83a1a548-ac79-41f3-b850-196ee4c5760d"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--90a0e560-0a85-4795-b65e-a03273328730",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Atomic T1083.002",
+      "description": "Atomic Test #2 - File and Directory Discovery (PowerShell)"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--83a1a548-ac79-41f3-b850-196ee4c5760d",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "T1005",
+      "pattern": "[\n  process:name = 'powershell.exe' AND (\n    (\n      process:command_line MATCHES '(?i)Get-ChildItem\\\\s+-Path.*-File\\\\s+-Recurse' AND\n      process:command_line MATCHES '(?i)Where-Object.*Extension.*contains'\n    ) OR (\n      process:command_line MATCHES '(?i)Compress-Archive\\\\s+-Path.*-DestinationPath.*\\\\\\\\\\s*data\\\\.zip'\n    ) OR (\n      process:command_line MATCHES '(?i)Remove-Item\\\\s+-Path.*\\\\\\\\\\s*data\\\\.zip\\\\s+-Force'\n    )\n  )\n]",
+      "on_true_refs": [
+        "attack-action--5b265824-b26f-4e50-bffb-c55683e81db1"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--5b265824-b26f-4e50-bffb-c55683e81db1",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Data From Local System",
+      "tactic_id": "TA0009",
+      "tactic_ref": "x-mitre-tactic--d108ce10-2419-4cf9-a774-46161d6c6cfe",
+      "technique_id": "T1005",
+      "technique_ref": "attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18",
+      "description": "Create some files with 'valuable' content",
+      "asset_refs": [
+        "attack-asset--ba2870c2-c0ce-4b9c-b1e0-665bc267d1a9",
+        "attack-asset--21b3ed9a-83a4-4bf7-a70e-43d0177fd966"
+      ],
+      "effect_refs": [
+        "attack-condition--ee09480a-c427-4de9-8538-3fe72d32a9c6"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--ba2870c2-c0ce-4b9c-b1e0-665bc267d1a9",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Atomic T1005",
+      "description": "Atomic Test #1 - search for 'valuable files' from T1005"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--21b3ed9a-83a4-4bf7-a70e-43d0177fd966",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Files with valuable Content",
+      "description": "located on Win4"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--ee09480a-c427-4de9-8538-3fe72d32a9c6",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "T1567.003",
+      "pattern": "[\n  process:name = 'powershell.exe' AND (\n    (\n      process:command_line MATCHES '(?i)Invoke-RestMethod\\\\s+-Uri\\\\s+.*pastebin\\\\.com.*-Method\\\\s+Post'\n    ) OR (\n      process:command_line MATCHES '(?i)Invoke-WebRequest\\\\s+-Uri\\\\s+.*pastebin\\\\.com.*-Method\\\\s+Post'\n    ) OR (\n      process:command_line MATCHES '(?i)api_dev_key.*api_option.*api_paste_code'\n    ) OR (\n      network-traffic:dst_ref.value MATCHES '(?i).*pastebin\\\\.com' AND\n      network-traffic:extensions.http-request-ext.method = 'POST'\n    )\n  )\n]",
+      "on_true_refs": [
+        "attack-action--a1335d4a-36d8-49cb-a873-7fc64a3e9832"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a1335d4a-36d8-49cb-a873-7fc64a3e9832",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Exfiltration Over Web Service: Exfiltration to Text Storage Sites",
+      "tactic_id": "TA0010",
+      "tactic_ref": "x-mitre-tactic--9a4e74ab-5008-408c-84bf-a10dfbc53462",
+      "technique_id": "T1567.003",
+      "technique_ref": "attack-pattern--ba04e672-da86-4e69-aa15-0eca5db25f43",
+      "asset_refs": [
+        "attack-asset--6bd7a484-f946-4ff0-a0de-6450723b87a4"
+      ]
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--6bd7a484-f946-4ff0-a0de-6450723b87a4",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Atomic T1567'003",
+      "description": "Atomic Test #1  \n Exfiltrate data with HTTP POST to text storage sites - pastebin.com"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--c45e2394-72b0-4cbd-b3ed-3fc58d0a4b85",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "T1078",
+      "pattern": "[\n  (\n    process:name = 'net.exe' AND \n    process:command_line MATCHES '(?i)net\\\\s+user\\\\s+(guest|administrator|admin|root)\\\\s+.*(/active:yes|/add)'\n  ) OR (\n    process:name = 'net.exe' AND \n    process:command_line MATCHES '(?i)net\\\\s+localgroup\\\\s+(administrators|\"remote\\\\s+desktop\\\\s+users\")\\\\s+(guest|administrator|admin|root)'\n  ) OR (\n    windows-registry-key:key LIKE 'HKEY_LOCAL_MACHINE\\\\system\\\\CurrentControlSet\\\\Control\\\\Terminal Server' AND\n    (\n      (windows-registry-key:values.name = 'fDenyTSConnections' AND windows-registry-key:values.data = '0') OR\n      (windows-registry-key:values.name = 'AllowTSConnections' AND windows-registry-key:values.data = '1')\n    )\n  )\n]",
+      "on_true_refs": [
+        "attack-action--342ef8b8-0a7f-4401-aa08-84696abb225a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--5e7bf5b2-000b-4eb7-97c6-5f724acfba78",
+      "spec_version": "2.1",
+      "created": "2025-05-20T11:25:52.229Z",
+      "modified": "2025-05-20T11:25:52.229Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Start State",
+      "effect_refs": [
+        "attack-condition--c45e2394-72b0-4cbd-b3ed-3fc58d0a4b85"
+      ]
+    }
+  ]
+}

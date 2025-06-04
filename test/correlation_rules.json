@@ -1,0 +1,34 @@
+{
+  "rule-001": {
+    "name": "Suspicious Email Client Launching Browser",
+    "techniques": ["T1566", "T1566.001", "T1566.002"],
+    "stix_pattern": "[process:creator_ref.name MATCHES '(?i).*outlook.*' OR process:creator_ref.name MATCHES '(?i).*thunderbird.*' OR process:creator_ref.name MATCHES '(?i).*mail.*'] AND [process:name MATCHES '(?i).*edge.*' OR process:name MATCHES '(?i).*chrome.*' OR process:name MATCHES '(?i).*firefox.*']"
+  },
+  "rule-002": {
+    "name": "Scheduled Task Creation",
+    "techniques": ["T1053", "T1053.005"],
+    "stix_pattern": "[process:name = 'schtasks.exe'] AND [process:command_line MATCHES '(?i).*create.*']"
+  },
+  "rule-003": {
+    "name": "PowerShell with Encoded Command",
+    "techniques": ["T1059.001", "T1027"],
+    "stix_pattern": "[process:name MATCHES '(?i).*powershell.*'] AND [process:command_line MATCHES '(?i).*-enc.*' OR process:command_line MATCHES '(?i).*-encodedcommand.*']"
+  },
+  "rule-004": {
+    "name": "Suspicious Outbound Network Connection",
+    "techniques": ["T1071", "T1571"],
+    "stix_pattern": "[network-traffic:dst_port = '4444' OR network-traffic:dst_port = '5555' OR network-traffic:dst_port = '6666']"
+  },
+
+  "rule-005": {
+    "name": "Valid Accounts Usage Detection",
+    "techniques": ["T1078", "T1078.001", "T1078.002", "T1078.003", "T1078.004"],
+    "stix_pattern": "[process:command_line MATCHES '(?i).*runas.*']"
+  },
+  "rule-006": {
+    "name": "Network Share Discovery",
+    "techniques": ["T1135"],
+    "stix_pattern": "[process:name MATCHES '(?i).*net.*' AND process:command_line MATCHES '(?i).*view.*'] OR [process:name MATCHES '(?i).*net.*' AND process:command_line MATCHES '(?i).*share.*'] OR [process:name MATCHES '(?i).*findstr.*' AND process:command_line MATCHES '(?i).*net share.*'] OR [process:name MATCHES '(?i).*powershell.*' AND process:command_line MATCHES '(?i).*get-smbshare.*']"
+  }
+}
+
